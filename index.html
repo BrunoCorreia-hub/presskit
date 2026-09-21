@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NOME ARTÍSTICO — DJ de Piseiro | Press Kit e Contratação</title>
+    <meta name="description"
+        content="Press kit oficial do DJ de piseiro NOME ARTÍSTICO. Fotos em alta, materiais de divulgação e informações para contratação de eventos.">
+
+    <!-- ==========================================================
+     PRESS KIT — DJ DE PISEIRO
+     Arquivos do projeto:
+       /index.html
+       /css/style.css
+       /js/script.js
+       /assets/images/dj-01.jpg ... dj-06.jpg   <- fotos oficiais
+       /assets/press-kit/press-kit-dj.pdf       <- PRESS KIT EM PDF
+     >>> Coloque o arquivo press-kit-dj.pdf em:
+         assets/press-kit/press-kit-dj.pdf
+     >>> Substitua as imagens de exemplo pelas fotos oficiais do DJ
+         em assets/images/ e ajuste os caminhos nos <img> abaixo.
+     >>> Todos os dados do artista (nome, WhatsApp, Instagram, e-mail,
+         telefone e caminho do PDF) ficam em js/script.js -> const ARTISTA
+     ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="hdr" id="topo">
+        <div class="hdr__inner">
+            <a href="#inicio" class="brand">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name" data-artista="nome">NOME ARTÍSTICO</span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Navegação principal">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link is-active">Início</a></li>
+                    <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li><a href="#fotos" class="nav__link">Fotos</a></li>
+                    <li><a href="#press-kit" class="nav__link">Press Kit</a></li>
+                    <li><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+                <a href="#" class="btn btn--red btn--sm nav__cta" data-presskit-download>
+                    <span>Baixar press kit</span>
+                </a>
+            </nav>
+
+            <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="inicio">
+            <!-- SUBSTITUIR: assets/images/dj-hero.jpg (foto oficial do DJ) -->
+            <div class="hero__media">
+                <img src="https://images.pexels.com/photos/27595367/pexels-photo-27595367.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1920&h=1280"
+                    alt="DJ NOME ARTÍSTICO durante apresentação ao vivo" fetchpriority="high">
+            </div>
+
+            <div class="hero__inner">
+                <p class="hero__eyebrow">Press kit oficial · 2026</p>
+
+                <h1 class="hero__title">
+                    <span class="l1" data-artista="nome">NOME ARTÍSTICO</span>
+                    <span class="l2">REMIX</span>
+                </h1>
+
+                <div class="hero__foot">
+                    <div class="hero__say">
+                        <p class="hero__tags">DJ &nbsp;•&nbsp; Piseiro &nbsp;•&nbsp; Eventos</p>
+                    </div>
+                    <div class="hero__actions">
+                        <a href="assets/press-kit/press-kit-dj.pdf" class="btn btn--paper" data-presskit-download
+                            download>
+                            <span>Baixar press kit</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16" />
+                            </svg>
+                        </a>
+                        <a href="#contato" class="btn btn--ghost">
+                            <span>Entrar em contato</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- faixa impressa (selo) -->
+        <div class="strip" aria-hidden="true">
+            <div class="strip__track">
+                <span>Piseiro</span><i></i><span>Forró</span><i></i><span>Festas</span><i></i><span>Casas de
+                    show</span><i></i>
+                <span>Piseiro</span><i></i><span>Forró</span><i></i><span>Festas</span><i></i><span>Casas de
+                    show</span><i></i>
+                <span>Piseiro</span><i></i><span>Forró</span><i></i><span>Festas</span><i></i><span>Casas de
+                    show</span><i></i>
+            </div>
+        </div>
+
+        <!-- ============ SOBRE ============ -->
+        <section class="sec sobre" id="sobre">
+            <div class="wrap sobre__grid">
+                <div class="sobre__text reveal">
+                    <p class="label"><span class="label__num">01</span> Sobre o artista</p>
+                    <h2 class="h2">Feito pra pista,<br>montado pro palco.</h2>
+                    <p class="lead">
+                        [NOME ARTÍSTICO] é DJ e produtor de piseiro. [Cidade/UF]. Começou nas festas de
+                        chão de barro do interior e levou o piseiro para clubes, casas de show e grandes
+                        eventos — sem perder o suingue que faz a pista encher.
+                    </p>
+                    <!-- <p class="body">
+                        O set mistura piseiro, forró eletrônico, sertanejo e funk em leituras de pista
+                        construídas na hora, com transições firmes e repertório que atravessa gerações.
+                        Atuação profissional em festas, eventos particulares, casas de show, eventos
+                        corporativos e festivais.
+                    </p> -->
+
+                    <ul class="facts">
+                        <li class="facts__row"><span class="k">Base</span><span class="leader"></span><span
+                                class="v">[Cidade / UF]</span></li>
+                        <li class="facts__row"><span class="k">Estilo</span><span class="leader"></span><span
+                                class="v">Piseiro</span></li>
+                        <li class="facts__row"><span class="k">Formato</span><span class="leader"></span><span
+                                class="v">DJ set</span></li>
+                    </ul>
+                </div>
+
+                <!-- SUBSTITUIR: assets/images/dj-02.jpg -->
+                <figure class="sobre__photo reveal">
+                    <img src="https://images.pexels.com/photos/36105584/pexels-photo-36105584.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=1200"
+                        alt="Retrato do DJ NOME ARTÍSTICO nos equipamentos" loading="lazy">
+                    <figcaption><span>02</span> Foto oficial — divulgação</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============ FOTOS ============ -->
+        <section class="sec fotos" id="fotos">
+            <div class="wrap">
+                <header class="sec__head reveal">
+                    <p class="label"><span class="label__num">02</span> Fotos do DJ</p>
+                    <h2 class="h2">Material de divulgação</h2>
+                    <p class="sec__note">Clique na imagem para ampliar. Arquivos em alta resolução no press kit.</p>
+                </header>
+
+                <div class="grid-fotos">
+                    <!-- SUBSTITUIR: assets/images/dj-01.jpg ... dj-06.jpg -->
+                    <figure class="shot shot--a reveal">
+                        <button class="shot__btn" type="button"
+                            data-full="https://images.pexels.com/photos/35287290/pexels-photo-35287290.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=1600"
+                            data-cap="Foto oficial — 01">
+                            <img src="https://images.pexels.com/photos/35287290/pexels-photo-35287290.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=1250"
+                                alt="Foto oficial do DJ NOME ARTÍSTICO" loading="lazy">
+                        </button>
+                        <figcaption><span>01</span> Foto oficial</figcaption>
+                    </figure>
+
+                    <figure class="shot shot--b reveal">
+                        <button class="shot__btn" type="button"
+                            data-full="https://images.pexels.com/photos/9003002/pexels-photo-9003002.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=1040"
+                            data-cap="Evento — 02">
+                            <img src="https://images.pexels.com/photos/9003002/pexels-photo-9003002.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1400&h=900"
+                                alt="Pista cheia durante apresentação do DJ" loading="lazy">
+                        </button>
+                        <figcaption><span>02</span> Evento</figcaption>
+                    </figure>
+
+                    <figure class="shot shot--c reveal">
+                        <button class="shot__btn" type="button"
+                            data-full="https://images.pexels.com/photos/19874589/pexels-photo-19874589.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=1600"
+                            data-cap="Divulgação — 03">
+                            <img src="https://images.pexels.com/photos/19874589/pexels-photo-19874589.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=1250"
+                                alt="DJ com fone de ouvido em foto de divulgação" loading="lazy">
+                        </button>
+                        <figcaption><span>03</span> Divulgação</figcaption>
+                    </figure>
+
+                    <figure class="shot shot--d reveal">
+                        <button class="shot__btn" type="button"
+                            data-full="https://images.pexels.com/photos/27570912/pexels-photo-27570912.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=1040"
+                            data-cap="Evento — 04">
+                            <img src="https://images.pexels.com/photos/27570912/pexels-photo-27570912.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1400&h=900"
+                                alt="DJ animando a plateia em evento" loading="lazy">
+                        </button>
+                        <figcaption><span>04</span> Evento</figcaption>
+                    </figure>
+
+                    <figure class="shot shot--e reveal">
+                        <button class="shot__btn" type="button"
+                            data-full="https://images.pexels.com/photos/15349812/pexels-photo-15349812.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=1600"
+                            data-cap="Material promocional — 05">
+                            <img src="https://images.pexels.com/photos/15349812/pexels-photo-15349812.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=1250"
+                                alt="DJ na cabine sob luzes de palco" loading="lazy">
+                        </button>
+                        <figcaption><span>05</span> Material promocional</figcaption>
+                    </figure>
+
+                    <figure class="shot shot--f reveal">
+                        <button class="shot__btn" type="button"
+                            data-full="https://images.pexels.com/photos/31923252/pexels-photo-31923252.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=1040"
+                            data-cap="Divulgação — 06">
+                            <img src="https://images.pexels.com/photos/31923252/pexels-photo-31923252.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1400&h=900"
+                                alt="Apresentação do DJ em casa de shows" loading="lazy">
+                        </button>
+                        <figcaption><span>06</span> Divulgação</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRESS KIT (seção principal) ============ -->
+        <section class="presskit" id="press-kit">
+            <div class="wrap presskit__grid">
+                <div class="presskit__main reveal">
+                    <p class="label label--ink"><span class="label__num">03</span> Materiais oficiais</p>
+                    <h2 class="presskit__title">Press Kit</h2>
+                    <p class="presskit__sub">Materiais oficiais para divulgação e contratação.</p>
+                    <p class="presskit__body">
+                        O arquivo em PDF reúne biografia, fotos em alta resolução, ficha técnica,
+                        informações de contratação e contatos oficiais do artista. É o material
+                        oficial para imprensa, contratantes e produtores de eventos.
+                    </p>
+
+                    <div class="presskit__actions">
+                        <a href="assets/press-kit/press-kit-dj.pdf" class="btn btn--ink btn--lg" data-presskit-download
+                            download>
+                            <span>Baixar press kit em PDF</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16" />
+                            </svg>
+                        </a>
+                        <a href="assets/press-kit/press-kit-dj.pdf" class="btn btn--line btn--lg" data-presskit-view
+                            target="_blank" rel="noopener">
+                            <span>Visualizar press kit</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="presskit__status" id="pkStatus" role="status" aria-live="polite"></p>
+                </div>
+
+                <aside class="presskit__meta reveal">
+                    <p class="label label--ink">Arquivo</p>
+                    <ul class="filelist">
+                        <li><span>Formato</span><b>PDF</b></li>
+                        <li><span>Idioma</span><b>PT-BR</b></li>
+                        <li><span>Uso</span><b>Imprensa e contratação</b></li>
+                        <li><span>Conteúdo</span><b>Biografia · Fotos · Rider · Contatos</b></li>
+                    </ul>
+                    <!-- <p class="filepath">
+                        Caminho do arquivo no projeto<br>
+                        <code>assets/press-kit/press-kit-dj.pdf</code>
+                    </p> -->
+                </aside>
+            </div>
+        </section>
+
+        <!-- ============ CONTRATANTES ============ -->
+        <section class="sec rider" id="contratantes">
+            <div class="wrap rider__grid">
+                <header class="rider__head reveal">
+                    <p class="label label--dark"><span class="label__num">04</span> Informações para contratantes</p>
+                    <h2 class="h2 h2--dark">Ficha de contratação</h2>
+                    <p class="rider__note">
+                        Informações objetivas para orçamento e produção. Dados completos,
+                        rider técnico e cachê sob consulta com a equipe do artista.
+                    </p>
+                </header>
+
+                <div class="rider__table reveal">
+                    <div class="rider__row"><span class="k">Formato</span><span class="leader"></span><span
+                            class="v">DJ</span></div>
+                    <div class="rider__row"><span class="k">Estilo</span><span class="leader"></span><span
+                            class="v">Piseiro / Forró / Sertanejo / Funk e outros</span></div>
+                    <div class="rider__row"><span class="k">Atuação</span><span class="leader"></span><span
+                            class="v">Festas, eventos particulares, casas de shows, corporativo e festivais</span></div>
+                    <div class="rider__row"><span class="k">Duração do set</span><span class="leader"></span><span
+                            class="v">A definir</span></div>
+                    <div class="rider__row"><span class="k">Estrutura técnica</span><span class="leader"></span><span
+                            class="v">Rider completo sob consulta</span></div>
+                    <div class="rider__row"><span class="k">Deslocamento</span><span class="leader"></span><span
+                            class="v">A definir</span></div>
+                    <div class="rider__row"><span class="k">Disponibilidade</span><span class="leader"></span><span
+                            class="v">Sob consulta</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTATO ============ -->
+        <section class="sec contato" id="contato">
+            <div class="wrap">
+                <p class="label reveal"><span class="label__num">05</span> Contato / Contratação</p>
+                <h2 class="contato__title reveal">Vamos fazer seu<br>evento acontecer?</h2>
+                <p class="contato__lead reveal">Fale direto com a equipe para orçamento, datas e produção.</p>
+
+                <div class="contato__actions reveal">
+                    <a href="#" class="btn btn--red btn--lg" data-contato="whatsapp" target="_blank" rel="noopener">
+                        <span>WhatsApp</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 20.5l1.6-5.5A8.4 8.4 0 1 1 21 11.5Z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="btn btn--ghost btn--lg" data-contato="instagram" target="_blank" rel="noopener">
+                        <span>Instagram</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                        </svg>
+                    </a>
+                    <a href="#" class="btn btn--ghost btn--lg" data-contato="email">
+                        <span>E-mail</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 6h18v12H3zM3 7l9 6 9-6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="contato__direct reveal">
+                    <span data-contato="telefone-txt">+55 (11) 99999-9999</span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span data-contato="email-txt">contato@email.com</span>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="ftr">
+        <div class="wrap ftr__inner">
+            <p class="ftr__brand"><span class="brand__mark" aria-hidden="true"></span><span data-artista="nome">NOME
+                    ARTÍSTICO</span></p>
+            <nav class="ftr__links" aria-label="Redes e contato">
+                <a href="#" data-contato="instagram" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" data-contato="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="assets/press-kit/press-kit-dj.pdf" data-presskit-download download>Press Kit</a>
+            </nav>
+            <p class="ftr__copy">© <span id="ano">2026</span> <span data-artista="nome">NOME ARTÍSTICO</span> — Todos os
+                direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CTA fixo (mobile) -->
+    <a href="assets/press-kit/press-kit-dj.pdf" class="stickycta" id="stickyCta" data-presskit-download download>
+        <span>Baixar press kit</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16" />
+        </svg>
+    </a>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos" hidden>
+        <button class="lightbox__close" id="lbClose" aria-label="Fechar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 5l14 14M19 5L5 19" />
+            </svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 5l-7 7 7 7" />
+            </svg>
+        </button>
+        <figure class="lightbox__stage">
+            <img id="lbImg" src="" alt="">
+            <figcaption id="lbCap"></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Próxima foto">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+        <p class="lightbox__count"><span id="lbIndex">1</span> / <span id="lbTotal">6</span></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
