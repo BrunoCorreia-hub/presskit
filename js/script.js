@@ -7,7 +7,7 @@
    ========================================================================= */
 
 const ARTISTA = {
-    nome: "NOME ARTISTICO",
+    nome: "DJ DANDAN VIEIRA",
     whatsapp: "5511999999999",                 // só números, com DDI e DDD
     instagram: "https://instagram.com/",        // link completo do perfil
     email: "contato@email.com",
