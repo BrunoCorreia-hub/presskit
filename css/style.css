@@ -429,10 +429,10 @@ body.menu-aberto .burger span:nth-child(3){ transform:translateY(-7px) rotate(-4
     align-items:start;
 }
 .shot{ margin:0; }
-.shot--a{ grid-column:1 / 6; }
-.shot--b{ grid-column:6 / 13; margin-top:clamp(2rem, 6vw, 6rem); }
-.shot--c{ grid-column:1 / 5; }
-.shot--d{ grid-column:5 / 13; margin-top:clamp(1rem, 3vw, 3rem); }
+.shot--a{ grid-column:1 / 5; }
+.shot--b{ grid-column:5 / 9; /* margin-top:clamp(2rem, 6vw, 6rem); */ }
+.shot--c{ grid-column:9 / 13; }
+.shot--d{ grid-column:1 / 13; margin-top:clamp(1rem, 3vw, 3rem); }
 
 .shot__btn{
     display:block; width:100%;
@@ -450,8 +450,8 @@ body.menu-aberto .burger span:nth-child(3){ transform:translateY(-7px) rotate(-4
     filter:grayscale(.45) contrast(1.06);
     transition:transform .6s cubic-bezier(.22,.61,.36,1), filter .5s ease;
 }
-.shot--a .shot__btn, .shot--c .shot__btn, .shot--e .shot__btn{ aspect-ratio:3/4; }
-.shot--b .shot__btn, .shot--d .shot__btn, .shot--f .shot__btn{ aspect-ratio:16/10; }
+.shot--a .shot__btn, .shot--c .shot__btn, .shot--b .shot__btn{ height:580px; }
+.shot--d .shot__btn{ aspect-ratio:16/10; }
 .shot__btn:hover img{ transform:scale(1.03); filter:grayscale(0) contrast(1.06); }
 
 /* ---- Press Kit (faixa dourada chapada) ---- */
@@ -933,9 +933,10 @@ body.menu-aberto{ overflow:hidden; }
 
     /* cards de foto ganham enquadramento mais compacto, cheio na largura da tela */
     .grid-fotos{ gap:1.2rem; }
-    .shot--a .shot__btn, .shot--c .shot__btn, .shot--e .shot__btn,
-    .shot--b .shot__btn, .shot--d .shot__btn, .shot--f .shot__btn{ aspect-ratio:1/1; }
+    .shot--a .shot__btn, .shot--c .shot__btn,
+    .shot--b .shot__btn, .shot--d .shot__btn{ aspect-ratio:1/1; }
     .shot__btn img{ object-position:center; }
+    .shot--d img{ height:230px;}
 
     .sobre__photo img{ aspect-ratio:1/1; }
 
