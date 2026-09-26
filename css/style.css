@@ -598,6 +598,7 @@ body.menu-aberto .burger span:nth-child(3){ transform:translateY(-7px) rotate(-4
     font-weight:600;
     max-width:60%;
 }
+.ftr img{ width: 180px;}
 
 /* ---- Contato ---- */
 .contato__title{
