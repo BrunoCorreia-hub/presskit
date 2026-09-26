@@ -8,15 +8,15 @@
 
 const ARTISTA = {
     nome: "DJ DANDAN VIEIRA",
-    whatsapp: "5511999999999",                 // só números, com DDI e DDD
+    whatsapp: "556196571851",                 // só números, com DDI e DDD
     instagram: "https://instagram.com/",        // link completo do perfil
     email: "contato@email.com",
-    telefone: "+55 (11) 99999-9999",            // exibido na seção de contato
-    pressKit: "assets/press-kit/press-kit-dj.pdf"  // PDF oficial (coloque o arquivo aqui)
+    telefone: "+55 61 9657-1851",            // exibido na seção de contato
+    pressKit: "assets/press-kit/press-kit-dj-dandan-vieira.pdf"  // PDF oficial (coloque o arquivo aqui)
 };
 
 /* Nome do arquivo salvo no download */
-const PRESS_KIT_ARQUIVO = "press-kit-dj.pdf";
+const PRESS_KIT_ARQUIVO = "press-kit-dj-dandan-vieira.pdf";
 
 /* ======================================================================== */
 
@@ -321,3 +321,4 @@ document.addEventListener('DOMContentLoaded', function () {
         redimensionando = window.setTimeout(ajustarNome, 150);
     });
 });
+ 
