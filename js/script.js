@@ -9,8 +9,8 @@
 const ARTISTA = {
     nome: "DJ DANDAN VIEIRA",
     whatsapp: "556196571851",                 // só números, com DDI e DDD
-    instagram: "https://instagram.com/",        // link completo do perfil
-    email: "contato@email.com",
+    instagram: "https://www.instagram.com/dj_dandan_vieira",        // link completo do perfil
+    email: "daniellvieira0742@gmail.com",
     telefone: "+55 61 9657-1851",            // exibido na seção de contato
     pressKit: "assets/press-kit/press-kit-dj-dandan-vieira.pdf"  // PDF oficial (coloque o arquivo aqui)
 };

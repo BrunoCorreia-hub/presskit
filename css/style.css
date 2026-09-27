@@ -24,6 +24,10 @@
     --hdr-h: 74px;
 
     --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+
+    /* usados pelas novas animações (fundo sutil e efeito de digitação nos h2) */
+    --tw-step: 30ms;
+    --tw-char-dur: .4s;
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -31,6 +35,7 @@
 html{ scroll-behavior:smooth; scroll-padding-top:calc(var(--hdr-h) + 12px); -webkit-text-size-adjust:100%; }
 
 body{
+    position:relative;
     margin:0;
     background:var(--ink);
     color:var(--paper);
@@ -125,9 +130,9 @@ svg{
     font-size:.78rem; font-weight:700;
     letter-spacing:.16em; text-transform:uppercase;
     cursor:pointer;
-    transition:transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+    transition:transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .3s ease;
 }
-.btn:hover{ transform:translate(-2px,-2px); }
+.btn:hover{ transform:translate(-2px,-2px); box-shadow:0 14px 28px -12px rgba(255,153,0,.4); }
 .btn:active{ transform:translate(0,0); }
 
 .btn--sm{ min-height:42px; padding:0 1.1rem; font-size:.68rem; }
@@ -172,19 +177,6 @@ svg{
 
 .brand img{
     width:130px;
-}
-.brand__mark{
-    width:11px; height:11px;
-    background:var(--red);
-    display:inline-block;
-    transform:rotate(45deg);
-}
-.brand__name{
-    font-family:var(--f-display);
-    font-size:1.05rem;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    white-space:nowrap;
 }
 
 .nav{ display:flex; align-items:center; gap:2.2rem; }
@@ -377,7 +369,7 @@ body.menu-aberto .burger span:nth-child(3){ transform:translateY(-7px) rotate(-4
     display:grid;
     grid-template-columns:minmax(0, 1.15fr) minmax(0, .85fr);
     gap:clamp(2.5rem, 6vw, 6rem);
-    align-items:end;
+    align-items:start;
 }
 .sobre__photo{ margin:0; position:relative; }
 .sobre__photo img{
@@ -640,12 +632,6 @@ body.menu-aberto .burger span:nth-child(3){ transform:translateY(-7px) rotate(-4
 .ftr__inner{
     display:flex; align-items:center; justify-content:space-between;
     gap:1.6rem; flex-wrap:wrap;
-}
-.ftr__brand{
-    margin:0;
-    display:flex; align-items:center; gap:.6rem;
-    font-family:var(--f-display);
-    font-size:1rem; letter-spacing:.06em; text-transform:uppercase;
 }
 .ftr__links{ display:flex; gap:1.8rem; }
 .ftr__links a{
@@ -978,11 +964,105 @@ body.menu-aberto{ overflow:hidden; }
     .lightbox__nav{ width:44px; height:44px; }
 }
 
+/* ---------- 14. Fundo com movimento sutil ---------- */
+/* Camada fixa, atrás de todo o conteúdo (z-index:-1 dentro do contexto
+   criado por body{position:relative}). Não interfere em nenhuma seção:
+   onde o fundo já é sólido (press kit, rider) ela simplesmente fica coberta. */
+body::before{
+    content:'';
+    position:fixed;
+    inset:-15% -10%;
+    z-index:-1;
+    background:
+        radial-gradient(38% 32% at 18% 22%, rgba(255,153,0,.09), transparent 70%),
+        radial-gradient(34% 30% at 82% 68%, rgba(255,200,0,.07), transparent 70%),
+        radial-gradient(46% 40% at 55% 92%, rgba(255,85,0,.06), transparent 70%);
+    filter:blur(40px);
+    animation:bgDrift 46s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+@keyframes bgDrift{
+    0%{ transform:translate3d(0,0,0) scale(1); }
+    50%{ transform:translate3d(-2%, 1.5%, 0) scale(1.035); }
+    100%{ transform:translate3d(1.5%, -2%, 0) scale(1.02); }
+}
+ 
+/* ---------- 15. Entrada do hero ---------- */
+.hero__eyebrow{ animation:fadeUp .8s cubic-bezier(.22,.61,.36,1) both; animation-delay:.05s; }
+.hero__title .l1{ animation:fadeUp .9s cubic-bezier(.22,.61,.36,1) both; animation-delay:.16s; }
+.hero__title .l2{ animation:fadeUp .9s cubic-bezier(.22,.61,.36,1) both; animation-delay:.28s; }
+.hero__foot{ animation:fadeUp .9s cubic-bezier(.22,.61,.36,1) both; animation-delay:.42s; }
+@keyframes fadeUp{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:none; }
+}
+ 
+/* ---------- 16. Entrada escalonada da galeria ---------- */
+.grid-fotos .shot.reveal:nth-child(1){ transition-delay:0s; }
+.grid-fotos .shot.reveal:nth-child(2){ transition-delay:.08s; }
+.grid-fotos .shot.reveal:nth-child(3){ transition-delay:.16s; }
+.grid-fotos .shot.reveal:nth-child(4){ transition-delay:.24s; }
+ 
+/* ---------- 17. Efeito de máquina de escrever nos títulos (h2) ---------- */
+/* Ativado por js/typewriter.js (script isolado, não mexe em script.js).
+   Sem JS, sem IntersectionObserver ou com prefers-reduced-motion, o título
+   permanece como texto normal, sem nenhuma alteração visual. */
+.sr-only-tw{
+    position:absolute;
+    width:1px; height:1px;
+    padding:0; margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+}
+.tw-chars{ display:inline; }
+.tw-char{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(4px);
+    animation:twChar var(--tw-char-dur) ease forwards;
+    animation-delay:calc(var(--i, 0) * var(--tw-step));
+    animation-play-state:paused;
+}
+h2.tw-active .tw-char{ animation-play-state:running; }
+@keyframes twChar{ to{ opacity:1; transform:none; } }
+ 
+.tw-cursor{
+    display:inline-block;
+    width:2px;
+    height:.8em;
+    margin-left:.06em;
+    vertical-align:-0.08em;
+    background:currentColor;
+    opacity:0;
+    animation:twCursorIn .05s linear forwards, twCursorBlink .85s steps(1,end) infinite;
+    animation-delay:calc(var(--i, 0) * var(--tw-step)), calc(var(--i, 0) * var(--tw-step) + 120ms);
+    animation-play-state:paused, paused;
+}
+h2.tw-active .tw-cursor{ animation-play-state:running, running; }
+h2.tw-cursor-done .tw-cursor{
+    animation:none;
+    opacity:0;
+    transition:opacity .5s ease;
+}
+@keyframes twCursorIn{ to{ opacity:1; } }
+@keyframes twCursorBlink{ 50%{ opacity:0; } }
+ 
 /* ---------- 13. Preferência por menos movimento ---------- */
 @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     .reveal{ opacity:1; transform:none; transition:none; }
     .btn, .shot__btn img, .lightbox, .lightbox__stage{ transition:none; }
-    .btn:hover{ transform:none; }
+    .btn:hover{ transform:none; box-shadow:none; }
     .shot__btn:hover img{ transform:none; }
+
+    /* novas animações desligadas por completo */
+    body::before{ animation:none; }
+    .hero__eyebrow, .hero__title .l1, .hero__title .l2, .hero__foot{
+        animation:none; opacity:1; transform:none;
+    }
+    .grid-fotos .shot.reveal{ transition-delay:0s !important; }
+    .tw-char{ opacity:1; transform:none; animation:none; }
+    .tw-cursor{ display:none; }
 }
